@@ -35,7 +35,6 @@ export default function Login() {
            placeholder="Enter your username"
            onChange={e => setUsername(e.target.value)}
            />
-
         <label >Email</label>
         <input type="text"
           className="registerInput" 
@@ -43,7 +42,6 @@ export default function Login() {
           onChange={e => setEmail(e.target.value)}
           />
         <label >Password</label>
-
         <input type="text"
          className="registerInput"
           placeholder="Enter your passowrd"
@@ -51,13 +49,10 @@ export default function Login() {
           />
         <button className="registerButton" type="submit">Register</button>
         </form>
-
         <button className="registerLogin">
           <Link to="/login" style={{textDecoration:"none", color:"inherit"}}>Login</Link>
-          
         </button>
        {error && <span style={{color: "red", marginTop :"10px"}}>Something went wrong!</span>}  {/*This should only be shown when register with same details done next time so we will be using setError(false) below prevent  and {error && in span} */}
         </div>
-  )
-}
+  )}
 
